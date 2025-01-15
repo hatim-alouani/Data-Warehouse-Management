@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Update Product Price</h1>
+
+    <form method="POST">
+        <input type="text" name="product" placeholder="Product Name" required>
+        <input type="number" step="0.01" name="price" placeholder="New Price" required>
+        <button type="submit">Update Price</button>
+    </form>
+
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}"><button>Back to Home</button></a>
+</div>
+
+</body>
+</html>

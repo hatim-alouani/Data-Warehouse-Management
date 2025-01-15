@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Store Product Management</h1>
+
+    <div class="button-container">
+        <a href="{{ url_for('add_product') }}"><button>Add Product</button></a>
+        <a href="{{ url_for('delete_product') }}"><button>Delete Product</button></a>
+        <a href="{{ url_for('update_quantity') }}"><button>Update Quantity</button></a>
+        <a href="{{ url_for('update_price') }}"><button>Update Price</button></a> <!-- Added this line -->
+        <a href="{{ url_for('show_products') }}"><button>Show All Products</button></a>
+    </div>
+</div>
+
+</body>
+</html>
+
